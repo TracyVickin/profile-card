@@ -14,17 +14,18 @@
             background-color: #f4f4f4;
         }
         .profile-card {
-            background: #fff;
+            background: rgba(0, 0, 0, 0.07);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
             max-width: 350px;
             width: 100%;
+            border-radius: 8px;
         }
         .profile-card img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
         }
@@ -38,7 +39,7 @@
 </head>
 <body>
     <div class="profile-card">
-        <img src="profile.jpg" alt="Profile Picture" data-testid="profilePicture">
+        <img src="./IMAGES/WhatsApp Image 2025-02-01 at 4.05.48 PM.jpeg" alt="Profile Picture" data-testid="profilePicture">
         <h2 data-testid="fullName">Tracy Iyenlanye</h2>
         <h4 data-testid="jobTitle">Front-End Developer</h4>
         <p data-testid="shortBio"> I am a passionate front-end developer with a zeal for creating interactive and responsive user experiences. I am always eager to learn new technologies and collaborate on exciting projects.</p>
@@ -56,7 +57,9 @@
             const utcTime = new Date().toUTCString();
             document.getElementById('utc-time').innerText = `Current UTC Time: ${utcTime}`;
         }
+        
         updateTime();
+        setInterval(updateTime, 1000);
     </script>
 </body>
 </html>
